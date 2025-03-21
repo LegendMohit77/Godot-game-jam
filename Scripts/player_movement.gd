@@ -19,7 +19,7 @@ func _physics_process(delta):
 		velocity.y += gravity * delta
 
 	# Handle input
-	direction = Input.get_axis("ui_left", "ui_right")
+	direction = Input.get_axis("left", "right")
 
 	# Apply acceleration and friction
 	if direction != 0:
@@ -34,7 +34,7 @@ func _physics_process(delta):
 		coyote_timer -= delta
 
 	# Jump buffering
-	if Input.is_action_just_pressed("ui_accept"):
+	if Input.is_action_just_pressed("jump"):
 		jump_buffer_timer = jump_buffer_time
 
 	if jump_buffer_timer > 0:
@@ -45,8 +45,8 @@ func _physics_process(delta):
 			jump_buffer_timer = 0
 
 	# Variable jump height (short hop)
-	if Input.is_action_just_released("ui_accept") and velocity.y < 0:
-		velocity.y *= 0.5
+	if Input.is_action_just_released("jump") and velocity.y < 0:
+		velocity.y *= 0.4
 
 	# Move character
 	move_and_slide()

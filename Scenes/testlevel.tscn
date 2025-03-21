@@ -8,7 +8,6 @@
 normal = Vector2(0.847064, -0.531491)
 distance = -95.9543
 
-
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_w1rnm"]
 size = Vector2(1155.97, 46.7456)
 
@@ -20,7 +19,6 @@ position = Vector2(2, 330)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2"]
 position = Vector2(88, 237)
 rotation = 0.557692
-
 shape = SubResource("WorldBoundaryShape2D_w1rnm")
 
 [node name="StaticBody2D3" type="StaticBody2D" parent="."]
@@ -34,12 +32,6 @@ shape = SubResource("RectangleShape2D_w1rnm")
 [node name="Player" parent="." instance=ExtResource("1_w1rnm")]
 position = Vector2(203, 409)
 scale = Vector2(0.46, 0.46)
-maxSpeed = 350.0
-timeToReachMaxSpeed = 0.1
-jumpHeight = 2.5
-gravityScale = 31.705
-terminalVelocity = 919.048
-descendingGravityFactor = 2.443
 
 [node name="StaticBody2D" parent="." instance=ExtResource("2_4q2ik")]
 position = Vector2(413, 524)
