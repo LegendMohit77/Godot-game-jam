@@ -46,7 +46,7 @@ texture = ExtResource("2_3e6hu")
 
 [node name="Icon5" type="Sprite2D" parent="."]
 modulate = Color(0.93602, 0.693748, 0.716201, 1)
-position = Vector2(611, 313)
+position = Vector2(601, 313)
 texture = ExtResource("2_3e6hu")
 
 [node name="Icon6" type="Sprite2D" parent="."]
