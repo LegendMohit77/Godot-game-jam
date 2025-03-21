@@ -1,0 +1,24 @@
+[gd_scene load_steps=3 format=3 uid="uid://bgfghjub6ymu4"]
+
+[ext_resource type="PackedScene" uid="uid://dp7uf2k6ss5wo" path="res://Scenes/player.tscn" id="1_w1rnm"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_w1rnm"]
+normal = Vector2(-0.0204039, -0.999792)
+
+[node name="testlevel" type="Node2D"]
+
+[node name="Player" parent="." instance=ExtResource("1_w1rnm")]
+position = Vector2(240, 190)
+maxSpeed = 478.571
+jumpHeight = 2.53
+gravityScale = 43.81
+terminalVelocity = 1000.0
+descendingGravityFactor = 3.0
+dashType = 4
+
+[node name="RigidBody2D" type="StaticBody2D" parent="."]
+position = Vector2(2, 330)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D"]
+position = Vector2(152, 255)
+shape = SubResource("WorldBoundaryShape2D_w1rnm")
