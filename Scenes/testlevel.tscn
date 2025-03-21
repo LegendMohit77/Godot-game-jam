@@ -8,6 +8,7 @@
 normal = Vector2(0.847064, -0.531491)
 distance = -95.9543
 
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_w1rnm"]
 size = Vector2(1155.97, 46.7456)
 
@@ -19,6 +20,7 @@ position = Vector2(2, 330)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2"]
 position = Vector2(88, 237)
 rotation = 0.557692
+
 shape = SubResource("WorldBoundaryShape2D_w1rnm")
 
 [node name="StaticBody2D3" type="StaticBody2D" parent="."]
