@@ -16,7 +16,10 @@ var direction: float = 0.0
 func _physics_process(delta):
 	# Apply gravity
 	if not is_on_floor():
-		velocity.y += gravity * delta
+		if velocity.y>0:
+			velocity.y+=gravity*2*delta
+		else:
+			velocity.y += gravity * delta
 
 	# Handle input
 	direction = Input.get_axis("left", "right")
