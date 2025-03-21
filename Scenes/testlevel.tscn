@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://bgfghjub6ymu4"]
 
 [ext_resource type="PackedScene" uid="uid://dp7uf2k6ss5wo" path="res://Scenes/player.tscn" id="1_w1rnm"]
-[ext_resource type="PackedScene" uid="uid://ceq87du2w5iyx" path="res://Scenes/Platform.tscn" id="2_4q2ik"]
+[ext_resource type="PackedScene" path="res://Scenes/Platform.tscn" id="2_4q2ik"]
 [ext_resource type="PackedScene" uid="uid://cub2vkneoqwfh" path="res://Scenes/WinGate.tscn" id="3_0sylt"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_w1rnm"]
