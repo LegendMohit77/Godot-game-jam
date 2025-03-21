@@ -27,11 +27,10 @@ position = Vector2(2, 330)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D3"]
 position = Vector2(573.968, 303.73)
 rotation = -0.00498865
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_w1rnm")
 
 [node name="Player" parent="." instance=ExtResource("1_w1rnm")]
-position = Vector2(125, 396)
+position = Vector2(203, 409)
 scale = Vector2(0.46, 0.46)
 maxSpeed = 350.0
 timeToReachMaxSpeed = 0.1
