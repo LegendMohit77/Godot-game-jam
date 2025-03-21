@@ -1,17 +1,58 @@
-[gd_scene load_steps=3 format=3 uid="uid://bgfghjub6ymu4"]
+[gd_scene load_steps=6 format=3 uid="uid://bgfghjub6ymu4"]
 
 [ext_resource type="PackedScene" uid="uid://dp7uf2k6ss5wo" path="res://Scenes/player.tscn" id="1_w1rnm"]
+[ext_resource type="PackedScene" uid="uid://ceq87du2w5iyx" path="res://Scenes/Platform.tscn" id="2_4q2ik"]
+[ext_resource type="PackedScene" uid="uid://cub2vkneoqwfh" path="res://Scenes/WinGate.tscn" id="3_0sylt"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_w1rnm"]
+normal = Vector2(0.847064, -0.531491)
+distance = -95.9543
 
-[node name="testlevel" type="Node2D"]
 
-[node name="Player" parent="." instance=ExtResource("1_w1rnm")]
-position = Vector2(92, 114)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_w1rnm"]
+size = Vector2(1155.97, 46.7456)
 
-[node name="RigidBody2D" type="StaticBody2D" parent="."]
+[node name="Level" type="Node2D"]
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="."]
 position = Vector2(2, 330)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D"]
-position = Vector2(81, 308)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2"]
+position = Vector2(88, 237)
+rotation = 0.557692
+
 shape = SubResource("WorldBoundaryShape2D_w1rnm")
+
+[node name="StaticBody2D3" type="StaticBody2D" parent="."]
+position = Vector2(2, 330)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D3"]
+position = Vector2(573.968, 303.73)
+rotation = -0.00498865
+shape = SubResource("RectangleShape2D_w1rnm")
+
+[node name="Player" parent="." instance=ExtResource("1_w1rnm")]
+position = Vector2(203, 409)
+scale = Vector2(0.46, 0.46)
+maxSpeed = 350.0
+timeToReachMaxSpeed = 0.1
+jumpHeight = 2.5
+gravityScale = 31.705
+terminalVelocity = 919.048
+descendingGravityFactor = 2.443
+
+[node name="StaticBody2D" parent="." instance=ExtResource("2_4q2ik")]
+position = Vector2(413, 524)
+scale = Vector2(8.96, 2.04)
+
+[node name="StaticBody2D4" parent="." instance=ExtResource("2_4q2ik")]
+position = Vector2(710, 443)
+scale = Vector2(8.96, 2.04)
+
+[node name="StaticBody2D5" parent="." instance=ExtResource("2_4q2ik")]
+position = Vector2(963, 370)
+scale = Vector2(8.96, 2.04)
+
+[node name="Area2D" parent="." instance=ExtResource("3_0sylt")]
+position = Vector2(1094, 286)
+scale = Vector2(0.600002, 1)
