@@ -1,6 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://bgfghjub6ymu4"]
+[gd_scene load_steps=4 format=3 uid="uid://bgfghjub6ymu4"]
 
 [ext_resource type="PackedScene" uid="uid://dp7uf2k6ss5wo" path="res://Scenes/player.tscn" id="1_w1rnm"]
+[ext_resource type="Texture2D" uid="uid://xxfyboorjfkb" path="res://icon.svg" id="2_3e6hu"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_w1rnm"]
 normal = Vector2(-0.0204039, -0.999792)
@@ -22,3 +23,58 @@ position = Vector2(2, 330)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D"]
 position = Vector2(152, 255)
 shape = SubResource("WorldBoundaryShape2D_w1rnm")
+
+[node name="Icon" type="Sprite2D" parent="."]
+modulate = Color(0.93602, 0.693748, 0.716201, 1)
+position = Vector2(446, 510)
+texture = ExtResource("2_3e6hu")
+
+[node name="Icon2" type="Sprite2D" parent="."]
+modulate = Color(0.93602, 0.693748, 0.716201, 1)
+position = Vector2(768, 535)
+texture = ExtResource("2_3e6hu")
+
+[node name="Icon3" type="Sprite2D" parent="."]
+modulate = Color(0.93602, 0.693748, 0.716201, 1)
+position = Vector2(563, 420)
+texture = ExtResource("2_3e6hu")
+
+[node name="Icon4" type="Sprite2D" parent="."]
+modulate = Color(0.93602, 0.693748, 0.716201, 1)
+position = Vector2(675, 429)
+texture = ExtResource("2_3e6hu")
+
+[node name="Icon5" type="Sprite2D" parent="."]
+modulate = Color(0.93602, 0.693748, 0.716201, 1)
+position = Vector2(611, 313)
+texture = ExtResource("2_3e6hu")
+
+[node name="Icon6" type="Sprite2D" parent="."]
+modulate = Color(0.627507, 0.249017, 0.154838, 1)
+position = Vector2(632, 200)
+texture = ExtResource("2_3e6hu")
+
+[node name="Icon7" type="Sprite2D" parent="."]
+modulate = Color(0.627507, 0.249017, 0.154838, 1)
+position = Vector2(632, 83)
+texture = ExtResource("2_3e6hu")
+
+[node name="Icon8" type="Sprite2D" parent="."]
+modulate = Color(0.627507, 0.249017, 0.154838, 1)
+position = Vector2(620, -32)
+texture = ExtResource("2_3e6hu")
+
+[node name="Icon9" type="Sprite2D" parent="."]
+modulate = Color(0.93602, 0.693748, 0.716201, 1)
+position = Vector2(513, 547)
+texture = ExtResource("2_3e6hu")
+
+[node name="Icon10" type="Sprite2D" parent="."]
+modulate = Color(0.93602, 0.693748, 0.716201, 1)
+position = Vector2(703, 556)
+texture = ExtResource("2_3e6hu")
+
+[node name="Icon11" type="Sprite2D" parent="."]
+modulate = Color(0.627507, 0.249017, 0.154838, 1)
+position = Vector2(591, -146)
+texture = ExtResource("2_3e6hu")
