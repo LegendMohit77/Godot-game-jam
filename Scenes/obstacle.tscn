@@ -1,6 +1,14 @@
 [gd_scene load_steps=5 format=3 uid="uid://s86p7aq8syof"]
 
+<<<<<<< Updated upstream
 [ext_resource type="Script" path="res://Scripts/obstacle.gd" id="1_2p81s"]
+=======
+<<<<<<< HEAD
+[ext_resource type="Script" path="res://Scripts/obstacle.gd" id="1_2p81s"]
+=======
+[ext_resource type="Script" uid="uid://ckkxfj6rd5q3o" path="res://Scripts/obstacle.gd" id="1_2p81s"]
+>>>>>>> 183d2d6395ee0bf226f8a8d9b035a2aa15c2491e
+>>>>>>> Stashed changes
 [ext_resource type="Texture2D" uid="uid://f22vm0egshvm" path="res://Assets/puzzle_platformer_kit/puzzle_tileset.png" id="2_2p81s"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_rvx1i"]
@@ -18,7 +26,7 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="Area2D" type="Area2D"]
+[node name="spike" type="Area2D"]
 script = ExtResource("1_2p81s")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]

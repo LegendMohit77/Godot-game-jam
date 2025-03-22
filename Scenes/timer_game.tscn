@@ -1,0 +1,18 @@
+[gd_scene load_steps=2 format=3 uid="uid://c1c3iixbb4x0d"]
+
+[ext_resource type="Script" uid="uid://cygdyv1e2wxly" path="res://Scripts/timer_game.gd" id="1_dobex"]
+
+[node name="timer_game" type="Node"]
+script = ExtResource("1_dobex")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 25.0
+offset_top = 18.0
+offset_right = 73.0
+offset_bottom = 41.0
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 30.0
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
