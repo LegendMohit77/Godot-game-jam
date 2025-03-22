@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://bgfghjub6ymu4"]
+[gd_scene load_steps=9 format=3 uid="uid://4i1pfcnmn0px"]
 
 [ext_resource type="PackedScene" uid="uid://dp7uf2k6ss5wo" path="res://Scenes/player.tscn" id="1_jghel"]
 [ext_resource type="Texture2D" uid="uid://f22vm0egshvm" path="res://Assets/puzzle_platformer_kit/puzzle_tileset.png" id="2_slnnj"]
@@ -120,7 +120,6 @@ shape = SubResource("WorldBoundaryShape2D_w1rnm")
 [node name="Player" parent="." instance=ExtResource("1_jghel")]
 position = Vector2(76, 209)
 scale = Vector2(1.09663, 1.09609)
-gravity = 2850.0
 
 [node name="TileMap" type="TileMap" parent="."]
 position = Vector2(65, 296)

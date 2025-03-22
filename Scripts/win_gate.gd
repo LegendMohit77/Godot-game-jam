@@ -1,6 +1,5 @@
 extends Area2D
-@export var next_level: String ="res://Scenes/testlevel.tscn"
-
+@export var next_level: String ="res://Scenes/Level1.tscn"
 
 @onready var animated_sprite: AnimatedSprite2D = $AnimatedSprite2D
 	
