@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://s86p7aq8syof"]
 
-[ext_resource type="Script" uid="uid://dfqhpiyqwomq1" path="res://Scripts/obstacle.gd" id="1_2p81s"]
+[ext_resource type="Script" path="res://Scripts/obstacle.gd" id="1_2p81s"]
 [ext_resource type="Texture2D" uid="uid://f22vm0egshvm" path="res://Assets/puzzle_platformer_kit/puzzle_tileset.png" id="2_2p81s"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_rvx1i"]
