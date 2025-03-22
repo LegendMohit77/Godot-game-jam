@@ -1,34 +1,60 @@
-[gd_scene load_steps=5 format=3 uid="uid://cub2vkneoqwfh"]
+[gd_scene load_steps=9 format=3 uid="uid://cub2vkneoqwfh"]
 
 [ext_resource type="Script" uid="uid://bmco172ewefus" path="res://Scripts/win_gate.gd" id="1_nma8u"]
-[ext_resource type="Texture2D" uid="uid://xxfyboorjfkb" path="res://icon.svg" id="1_tsoc6"]
+[ext_resource type="Texture2D" uid="uid://f22vm0egshvm" path="res://Assets/puzzle_platformer_kit/puzzle_tileset.png" id="2_nma8u"]
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_nma8u"]
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_dlfxb"]
+radius = 61.8891
+height = 127.094
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dlfxb"]
+atlas = ExtResource("2_nma8u")
+region = Rect2(112, 32, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3xisf"]
+atlas = ExtResource("2_nma8u")
+region = Rect2(96, 32, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q7iri"]
+atlas = ExtResource("2_nma8u")
+region = Rect2(80, 32, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ca6hm"]
+atlas = ExtResource("2_nma8u")
+region = Rect2(64, 32, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_x7rkv"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("1_tsoc6")
+"texture": SubResource("AtlasTexture_dlfxb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3xisf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_q7iri")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ca6hm")
 }],
-"loop": true,
-"name": &"default",
-"speed": 5.0
+"loop": false,
+"name": &"Open",
+"speed": 12.0
 }]
-
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_dlfxb"]
-radius = 38.0322
-height = 114.097
 
 [node name="Area2D" type="Area2D"]
 script = ExtResource("1_nma8u")
-
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-modulate = Color(0.643137, 0, 0.878431, 1)
-sprite_frames = SubResource("SpriteFrames_nma8u")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(1, 0)
 scale = Vector2(-1.80969, -1.26719)
 shape = SubResource("CapsuleShape2D_dlfxb")
 debug_color = Color(0.806122, 0.00233222, 0.994365, 0.42)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(6.205, 6.205)
+sprite_frames = SubResource("SpriteFrames_x7rkv")
+animation = &"Open"
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
