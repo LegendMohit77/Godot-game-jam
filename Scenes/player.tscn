@@ -1,6 +1,6 @@
 [gd_scene load_steps=7 format=3 uid="uid://dp7uf2k6ss5wo"]
 
-[ext_resource type="Script" uid="uid://da4n70ga6uf5h" path="res://Scripts/player_movement.gd" id="1_cvnsp"]
+[ext_resource type="Script" uid="uid://b1ot0oe1430c2" path="res://Scripts/player_movement.gd" id="1_cvnsp"]
 [ext_resource type="Texture2D" uid="uid://csuvgkgxxrdnx" path="res://Assets/puzzle_platformer_kit/puzzle_hero/hero_3.png" id="2_vgqql"]
 [ext_resource type="Texture2D" uid="uid://b38iaswl1jhyn" path="res://Assets/puzzle_platformer_kit/puzzle_hero/hero_4.png" id="3_fkybt"]
 [ext_resource type="Texture2D" uid="uid://dm7qmtj8kn0v3" path="res://Assets/puzzle_platformer_kit/puzzle_hero/hero_5.png" id="4_x3wgy"]
@@ -26,7 +26,19 @@ animations = [{
 }]
 
 [node name="Player" type="CharacterBody2D"]
+z_index = 6
 script = ExtResource("1_cvnsp")
+speed = 200.0
+jump_force = -600.0
+<<<<<<< HEAD
+<<<<<<< HEAD
+gravity = 2500.0
+=======
+gravity = 2300.0
+>>>>>>> 4cfa4c2de435cfb44390ff6b5faecf4be667b376
+=======
+gravity = 2300.0
+>>>>>>> 4cfa4c2de435cfb44390ff6b5faecf4be667b376
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_vgqql")
