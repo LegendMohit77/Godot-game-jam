@@ -1,26 +1,26 @@
-[gd_scene load_steps=9 format=3 uid="uid://cub2vkneoqwfh"]
+[gd_scene load_steps=9 format=3 uid="uid://dxe85ffoak8lm"]
 
-[ext_resource type="Script" uid="uid://bmco172ewefus" path="res://Scripts/win_gate.gd" id="1_nma8u"]
-[ext_resource type="Texture2D" uid="uid://f22vm0egshvm" path="res://Assets/puzzle_platformer_kit/puzzle_tileset.png" id="2_nma8u"]
+[ext_resource type="Script" uid="uid://bpd42cwvgugbv" path="res://Scripts/entry_gate.gd" id="1_5tmet"]
+[ext_resource type="Texture2D" uid="uid://f22vm0egshvm" path="res://Assets/puzzle_platformer_kit/puzzle_tileset.png" id="2_re7sk"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_dlfxb"]
 radius = 37.5755
 height = 104.167
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_dlfxb"]
-atlas = ExtResource("2_nma8u")
+atlas = ExtResource("2_re7sk")
 region = Rect2(112, 32, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_3xisf"]
-atlas = ExtResource("2_nma8u")
+atlas = ExtResource("2_re7sk")
 region = Rect2(96, 32, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_q7iri"]
-atlas = ExtResource("2_nma8u")
+atlas = ExtResource("2_re7sk")
 region = Rect2(80, 32, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ca6hm"]
-atlas = ExtResource("2_nma8u")
+atlas = ExtResource("2_re7sk")
 region = Rect2(64, 32, 16, 16)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_x7rkv"]
@@ -43,8 +43,8 @@ animations = [{
 "speed": 12.0
 }]
 
-[node name="win" type="Area2D"]
-script = ExtResource("1_nma8u")
+[node name="entry" type="Area2D"]
+script = ExtResource("1_5tmet")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(1, 0)

@@ -20,14 +20,15 @@ func open_gate():
 		transition_to_next_level()
 
 func _on_body_entered(body: CharacterBody2D) -> void:
-	player_inside = true  # Mark player as inside
+	if body.is_in_group("player"):
+		player_inside = true  # Mark player as inside
 
-	if is_open:  # If the gate is already open, transition directly
-		transition_to_next_level()
-	elif not requires_button:  # If no button is required, open immediately
-		open_gate()
-		await animated_sprite.animation_finished  # Wait for animation before transition
-		transition_to_next_level()
+		if is_open:  # If the gate is already open, transition directly
+			transition_to_next_level()
+		elif not requires_button:  # If no button is required, open immediately
+			open_gate()
+			await animated_sprite.animation_finished  # Wait for animation before transition
+			transition_to_next_level()
 
 func transition_to_next_level():
 	var tree = get_tree()  
