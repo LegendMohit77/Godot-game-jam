@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://bidlxp7ul6plh"]
 
 [ext_resource type="Texture2D" uid="uid://bkavq0rbjlwsp" path="res://Assets/Sprite-0001.png" id="1_ynmvu"]
-[ext_resource type="Script" uid="uid://bjnryv46ynwto" path="res://Scripts/retry.gd" id="2_ue62w"]
+[ext_resource type="Script" path="res://Scripts/retry.gd" id="2_ue62w"]
 
 [node name="Node2D" type="Node2D"]
 
@@ -25,6 +25,7 @@ text = "RETRY"
 metadata/_edit_group_ = true
 
 [node name="Button" type="Button" parent="retry"]
+layout_mode = 0
 offset_right = 50.0
 offset_bottom = 25.0
 script = ExtResource("2_ue62w")
@@ -39,6 +40,7 @@ metadata/_edit_group_ = true
 
 [node name="Button" type="Button" parent="quit"]
 visible = false
+layout_mode = 0
 offset_left = 1.0
 offset_top = 2.0
 offset_right = 50.0
