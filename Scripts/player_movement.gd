@@ -4,7 +4,7 @@ extends CharacterBody2D
 @export var jump_force: float = -900.0
 @export var gravity: float = 3000.0
 
-
+@onready var sprite:AnimatedSprite2D=$AnimatedSprite2D	
 @export var coyote_time: float = 0.1 
 @export var jump_buffer_time: float = 0.2 
 
@@ -25,6 +25,7 @@ func _physics_process(delta):
 	
 	if direction != 0:
 		velocity.x = direction * speed
+		sprite.scale.x = -1 if direction < 0 else 1 
 	else:
 		velocity.x = 0 
 	

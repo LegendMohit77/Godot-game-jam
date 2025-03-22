@@ -1,5 +1,6 @@
-[gd_scene load_steps=4 format=3 uid="uid://cub2vkneoqwfh"]
+[gd_scene load_steps=5 format=3 uid="uid://cub2vkneoqwfh"]
 
+[ext_resource type="Script" uid="uid://bmco172ewefus" path="res://Scripts/win_gate.gd" id="1_nma8u"]
 [ext_resource type="Texture2D" uid="uid://xxfyboorjfkb" path="res://icon.svg" id="1_tsoc6"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_nma8u"]
@@ -18,8 +19,10 @@ radius = 38.0322
 height = 114.097
 
 [node name="Area2D" type="Area2D"]
+script = ExtResource("1_nma8u")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+modulate = Color(0.643137, 0, 0.878431, 1)
 sprite_frames = SubResource("SpriteFrames_nma8u")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -27,3 +30,5 @@ position = Vector2(1, 0)
 scale = Vector2(-1.80969, -1.26719)
 shape = SubResource("CapsuleShape2D_dlfxb")
 debug_color = Color(0.806122, 0.00233222, 0.994365, 0.42)
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
