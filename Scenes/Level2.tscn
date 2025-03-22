@@ -135,6 +135,8 @@ layer_1/z_index = -1
 [node name="win" parent="." instance=ExtResource("4_70df5")]
 position = Vector2(614, 204)
 scale = Vector2(0.197849, 0.232442)
+next_level = "res://Scenes/Level1.tscn"
+requires_button = true
 
 [node name="bg" type="Sprite2D" parent="."]
 z_index = -1
@@ -205,3 +207,4 @@ text = "Level 2"
 [node name="Button" parent="." instance=ExtResource("7_ehjmi")]
 position = Vector2(344, 75)
 scale = Vector2(1.47076, 1.65437)
+gate = NodePath("../win")
