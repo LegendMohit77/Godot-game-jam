@@ -1,4 +1,4 @@
-[gd_scene load_steps=2 format=3 uid="uid://c7thrxpc5hyns"]
+[gd_scene load_steps=2 format=3 uid="uid://c1c3iixbb4x0d"]
 
 [ext_resource type="Script" uid="uid://cygdyv1e2wxly" path="res://Scripts/timer_game.gd" id="1_dobex"]
 

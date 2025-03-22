@@ -10,40 +10,28 @@ position = Vector2(320, 180)
 texture = ExtResource("1_ynmvu")
 
 [node name="RichTextLabel" type="RichTextLabel" parent="."]
-offset_left = 280.0
-offset_top = 28.0
-offset_right = 367.0
-offset_bottom = 68.0
-text = "Time OUT"
+offset_left = 206.0
+offset_top = 30.0
+offset_right = 439.0
+offset_bottom = 104.0
+theme_override_font_sizes/normal_font_size = 45
+text = "Time Out"
 
-[node name="retry" type="RichTextLabel" parent="."]
-offset_left = 229.0
-offset_top = 151.0
-offset_right = 281.0
-offset_bottom = 181.0
-text = "RETRY"
-metadata/_edit_group_ = true
-
-[node name="Button" type="Button" parent="retry"]
-layout_mode = 0
-offset_right = 50.0
-offset_bottom = 25.0
+[node name="retry" type="Button" parent="."]
+offset_left = 154.0
+offset_top = 148.0
+offset_right = 284.0
+offset_bottom = 211.0
+theme_override_font_sizes/font_size = 40
+text = "Retry"
 script = ExtResource("2_ue62w")
 
-[node name="quit" type="RichTextLabel" parent="."]
-offset_left = 332.0
-offset_top = 151.0
-offset_right = 384.0
-offset_bottom = 181.0
+[node name="quit" type="Button" parent="."]
+offset_left = 336.0
+offset_top = 148.0
+offset_right = 471.0
+offset_bottom = 211.0
+theme_override_font_sizes/font_size = 40
 text = "Quit"
-metadata/_edit_group_ = true
 
-[node name="Button" type="Button" parent="quit"]
-visible = false
-layout_mode = 0
-offset_left = 1.0
-offset_top = 2.0
-offset_right = 50.0
-offset_bottom = 25.0
-
-[connection signal="pressed" from="retry/Button" to="retry/Button" method="_on_pressed"]
+[connection signal="pressed" from="retry" to="retry" method="_on_pressed"]
