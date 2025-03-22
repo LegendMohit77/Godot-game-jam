@@ -18,7 +18,7 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="Area2D" type="Area2D"]
+[node name="spike" type="Area2D"]
 script = ExtResource("1_2p81s")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
