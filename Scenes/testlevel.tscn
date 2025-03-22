@@ -1,0 +1,100 @@
+[gd_scene load_steps=10 format=3 uid="uid://bgfghjub6ymu4"]
+
+[ext_resource type="PackedScene" uid="uid://cnedlq4mrx46v" path="res://Scenes/obstacle.tscn" id="1_0sylt"]
+[ext_resource type="PackedScene" uid="uid://dp7uf2k6ss5wo" path="res://Scenes/player.tscn" id="1_w1rnm"]
+[ext_resource type="PackedScene" uid="uid://ceq87du2w5iyx" path="res://Scenes/Platform.tscn" id="2_4q2ik"]
+[ext_resource type="PackedScene" uid="uid://cub2vkneoqwfh" path="res://Scenes/WinGate.tscn" id="3_0sylt"]
+[ext_resource type="Texture2D" uid="uid://f22vm0egshvm" path="res://Assets/puzzle_platformer_kit/puzzle_tileset.png" id="5_anvtu"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_w1rnm"]
+normal = Vector2(0.847064, -0.531491)
+distance = -95.9543
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_w1rnm"]
+size = Vector2(1155.97, 46.7456)
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_agiab"]
+texture = ExtResource("5_anvtu")
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+4:0/0 = 0
+5:0/0 = 0
+6:0/0 = 0
+7:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+4:1/0 = 0
+5:1/0 = 0
+6:1/0 = 0
+7:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+3:2/0 = 0
+4:2/0 = 0
+5:2/0 = 0
+6:2/0 = 0
+7:2/0 = 0
+0:3/0 = 0
+1:3/0 = 0
+2:3/0 = 0
+3:3/0 = 0
+4:3/0 = 0
+5:3/0 = 0
+6:3/0 = 0
+7:3/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_7cfhn"]
+sources/0 = SubResource("TileSetAtlasSource_agiab")
+
+[node name="Level" type="Node2D"]
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="."]
+position = Vector2(2, 330)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2"]
+position = Vector2(88, 237)
+rotation = 0.557692
+shape = SubResource("WorldBoundaryShape2D_w1rnm")
+
+[node name="StaticBody2D3" type="StaticBody2D" parent="."]
+position = Vector2(2, 330)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D3"]
+position = Vector2(573.968, 303.73)
+rotation = -0.00498865
+shape = SubResource("RectangleShape2D_w1rnm")
+
+[node name="Area2D" parent="StaticBody2D3" instance=ExtResource("1_0sylt")]
+position = Vector2(396, 154)
+
+[node name="Player" parent="." instance=ExtResource("1_w1rnm")]
+position = Vector2(203, 409)
+scale = Vector2(2.08, 2.08)
+gravity = 2850.0
+
+[node name="StaticBody2D" parent="." instance=ExtResource("2_4q2ik")]
+position = Vector2(413, 524)
+scale = Vector2(8.96, 2.04)
+
+[node name="StaticBody2D4" parent="." instance=ExtResource("2_4q2ik")]
+position = Vector2(710, 443)
+scale = Vector2(8.96, 2.04)
+
+[node name="StaticBody2D5" parent="." instance=ExtResource("2_4q2ik")]
+position = Vector2(963, 370)
+scale = Vector2(8.96, 2.04)
+
+[node name="Area2D" parent="." instance=ExtResource("3_0sylt")]
+position = Vector2(1094, 286)
+scale = Vector2(0.600002, 1)
+
+[node name="TileMap" type="TileMap" parent="."]
+position = Vector2(398, 484)
+scale = Vector2(1.26824, 0.792288)
+tile_set = SubResource("TileSet_7cfhn")
+format = 2

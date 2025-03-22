@@ -46,7 +46,7 @@ func _physics_process(delta):
 	
 	# Variable jump height (short hop)
 	if Input.is_action_just_released("jump") and velocity.y < 0:
-		velocity.y *= 0.05
+		velocity.y *= 0.1
 	
 	# Move character
 	move_and_slide()
