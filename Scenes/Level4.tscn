@@ -140,7 +140,6 @@ layer_1/z_index = -1
 position = Vector2(42, 333)
 scale = Vector2(0.198, 0.232)
 enterable = true
-next_level = "res://Scenes/Level1.tscn"
 
 [node name="win" parent="." instance=ExtResource("6_iv3jq")]
 position = Vector2(614, 204)
@@ -199,11 +198,12 @@ rotation = 0.0206742
 position = Vector2(587, 304)
 rotation = 0.0206742
 
-[node name="Level 1" type="Label" parent="."]
+[node name="Level 4" type="Label" parent="."]
 modulate = Color(0.396078, 0.45098, 0.572549, 1)
 offset_left = 271.0
 offset_top = 12.0
 offset_right = 325.0
 offset_bottom = 35.0
+scale = Vector2(1.00275, 1.0039)
 theme_override_font_sizes/font_size = 23
 text = "Level 4"

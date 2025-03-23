@@ -2,7 +2,7 @@ extends Area2D
 
 @onready var anim= $AnimatedSprite2D
 @export var enterable :bool = false
-@export var next_level: String = "res://Scenes/Level2.tscn"
+@export var next_level: String = "res://Scenes/Level5.tscn"
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	anim.play("Open")
