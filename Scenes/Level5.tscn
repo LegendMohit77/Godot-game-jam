@@ -207,4 +207,4 @@ theme_override_font_sizes/font_size = 23
 text = "Level 5"
 
 [node name="PushableObject" parent="." instance=ExtResource("8_rbgxu")]
-position = Vector2(377, 90)
+position = Vector2(297, 81)
