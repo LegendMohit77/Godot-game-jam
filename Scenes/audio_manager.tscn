@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://cdxq7lcqkw004"]
+
+[ext_resource type="Script" uid="uid://8cv8xl52ftwh" path="res://Scripts/audiomanager.gd" id="1_4tj6f"]
+[ext_resource type="AudioStream" uid="uid://blmjrukycmkhl" path="res://Assets/sound/Jump25.wav" id="2_hhwve"]
+
+[node name="AudioManager" type="Node"]
+script = ExtResource("1_4tj6f")
+
+[node name="Jump" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_hhwve")
+volume_db = -43.647
+
+[node name="Land" type="AudioStreamPlayer" parent="."]

@@ -20,6 +20,7 @@ func open_gate():
 		transition_to_next_level()
 
 func _on_body_entered(body: CharacterBody2D) -> void:
+	
 	if body.is_in_group("player"):
 		player_inside = true  # Mark player as inside
 

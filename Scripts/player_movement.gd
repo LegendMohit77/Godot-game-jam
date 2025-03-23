@@ -4,7 +4,7 @@ extends CharacterBody2D
 @export var jump_force: float = -900.0
 @export var gravity: float = 3000.0
 @export var is_gravity_inverted: bool = false  # Set this to true in Level 3
-
+@export var push_force: float = 50
 @onready var sprite: AnimatedSprite2D = $AnimatedSprite2D	
 @export var coyote_time: float = 0.1 
 @export var jump_buffer_time: float = 0.2 
@@ -43,6 +43,7 @@ func _physics_process(delta):
 	
 	# 🔥 Jump Buffer
 	if Input.is_action_just_pressed("jump"):
+		
 		jump_buffer_timer = jump_buffer_time
 	
 	if jump_buffer_timer > 0:
@@ -54,12 +55,21 @@ func _physics_process(delta):
 	
 	# 🔥 Proper Variable Jump (Short Hop Fix)
 	if Input.is_action_just_released("jump"):
+		AudioManager.jump.play()
 		# If gravity is normal, cancel jump if still rising
 		if not is_gravity_inverted and velocity.y < 0:
 			velocity.y *= 0.4  # Reduce jump height
 		# If gravity is inverted, cancel jump if still moving up (which is now positive velocity)
 		elif is_gravity_inverted and velocity.y > 0:
 			velocity.y *= 0.4  # Reduce jump height
+			
+			#push
+	for i in get_slide_collision_count():
+		var collision = get_slide_collision(i)
+		var obj = collision.get_collider()
+		
+		if obj is RigidBody2D:
+			obj.apply_impulse(Vector2(direction * push_force, 0))
 	
 	# Move character
 	move_and_slide()
