@@ -27,6 +27,7 @@ animations = [{
 
 [node name="Player" type="CharacterBody2D" groups=["player"]]
 z_index = 6
+scale = Vector2(0.94, 0.94)
 script = ExtResource("1_cvnsp")
 speed = 200.0
 jump_force = -600.0

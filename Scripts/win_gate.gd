@@ -31,6 +31,11 @@ func _on_body_entered(body: CharacterBody2D) -> void:
 			await animated_sprite.animation_finished  # Wait for animation before transition
 			transition_to_next_level()
 
+func _on_body_exited(body: Node2D) -> void:
+	if body.is_in_group("player"):
+		player_inside=false
+
+
 func transition_to_next_level():
 	var tree = get_tree()  
 	if tree:  # Ensure get_tree() is valid before pausing
