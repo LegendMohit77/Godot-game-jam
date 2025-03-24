@@ -1,0 +1,48 @@
+[gd_scene load_steps=8 format=3 uid="uid://66wpapqv3a75"]
+
+[ext_resource type="Texture2D" uid="uid://bkavq0rbjlwsp" path="res://Assets/Sprite-0001.png" id="1_f2mtv"]
+[ext_resource type="Script" uid="uid://c7gsbunej8q42" path="res://Scenes/end_screen.gd" id="1_fi2y0"]
+[ext_resource type="FontFile" uid="uid://d2en3pd8tlcmj" path="res://Assets/vcr_osd_mono/VCR_OSD_MONO_1.001.ttf" id="2_8yanq"]
+[ext_resource type="StyleBox" uid="uid://dp1xh4aj7ha17" path="res://Scenes/main_menu.tres" id="3_fi2y0"]
+[ext_resource type="Texture2D" uid="uid://dy6mk6o7yjxwy" path="res://Assets/Button (6).png" id="4_em7vc"]
+[ext_resource type="Script" uid="uid://dyfo427cuewxw" path="res://Scenes/back.gd" id="5_4suit"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_wqrt5"]
+texture = ExtResource("4_em7vc")
+region_rect = Rect2(0, 0, 34, 10)
+
+[node name="end_screen" type="Node2D"]
+script = ExtResource("1_fi2y0")
+
+[node name="Sprite-0001" type="Sprite2D" parent="."]
+position = Vector2(320, 180)
+texture = ExtResource("1_f2mtv")
+
+[node name="main menu" type="Button" parent="."]
+offset_left = 237.0
+offset_top = 273.0
+offset_right = 415.0
+offset_bottom = 323.0
+theme_override_fonts/font = ExtResource("2_8yanq")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/hover = ExtResource("3_fi2y0")
+theme_override_styles/pressed = ExtResource("3_fi2y0")
+theme_override_styles/normal = SubResource("StyleBoxTexture_wqrt5")
+text = "Main Menu"
+script = ExtResource("5_4suit")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+offset_left = 171.0
+offset_top = 1.0
+offset_right = 502.0
+offset_bottom = 190.0
+theme_override_font_sizes/normal_font_size = 30
+text = "Congratulations! 🎉
+You have broken free from the loop.
+Thank you for playing!"
+
+[node name="Label" type="Label" parent="."]
+offset_left = 269.0
+offset_top = 191.0
+offset_right = 309.0
+offset_bottom = 214.0
