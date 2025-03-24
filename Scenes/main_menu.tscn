@@ -1,13 +1,14 @@
-[gd_scene load_steps=11 format=3 uid="uid://k2cq82lbm6xt"]
+[gd_scene load_steps=16 format=3 uid="uid://b2uqoobluwkm0"]
 
-[ext_resource type="Script" path="res://Scripts/main_menu.gd" id="1_n45e2"]
+[ext_resource type="Script" uid="uid://dlst25jspr7om" path="res://Scripts/main_menu.gd" id="1_n45e2"]
 [ext_resource type="Texture2D" uid="uid://bkavq0rbjlwsp" path="res://Assets/Sprite-0001.png" id="2_opfnp"]
 [ext_resource type="FontFile" uid="uid://d2en3pd8tlcmj" path="res://Assets/vcr_osd_mono/VCR_OSD_MONO_1.001.ttf" id="3_cp0ys"]
-[ext_resource type="StyleBox" path="res://Scenes/main_menu.tres" id="4_cp0ys"]
+[ext_resource type="StyleBox" uid="uid://dp1xh4aj7ha17" path="res://Scenes/main_menu.tres" id="4_cp0ys"]
 [ext_resource type="Texture2D" uid="uid://dy6mk6o7yjxwy" path="res://Assets/Button (6).png" id="4_yhxw7"]
 [ext_resource type="Script" path="res://Scripts/start.gd" id="5_trj04"]
-[ext_resource type="Script" path="res://Scenes/controls.gd" id="6_opfnp"]
-[ext_resource type="AudioStream" uid="uid://vm5vs2fjyhfs" path="res://Assets/sound/Track_#3.wav" id="8_yhxw7"]
+[ext_resource type="Texture2D" uid="uid://cbkooxl5uh0ml" path="res://Assets/Practice sheet[1].png" id="7_trj04"]
+[ext_resource type="Texture2D" uid="uid://dfrn42qeeq6ip" path="res://Assets/puzzle_platformer_kit/puzzle_hero/sprite_sheet.png" id="8_16hvj"]
+[ext_resource type="FontFile" uid="uid://dyt8grhpj4deu" path="res://Assets/sound/mago2.ttf" id="9_vr1f0"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_nlkkf"]
 texture = ExtResource("4_yhxw7")
@@ -17,22 +18,42 @@ region_rect = Rect2(0, 0, 34, 10)
 texture = ExtResource("4_yhxw7")
 region_rect = Rect2(0, 0, 34, 10)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_t1dhk"]
+atlas = ExtResource("7_trj04")
+region = Rect2(80, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_5egv6"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_t1dhk")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vtepg"]
+atlas = ExtResource("8_16hvj")
+region = Rect2(32, 16, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_8dnnj"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vtepg")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
 [node name="main menu" type="Node2D"]
 script = ExtResource("1_n45e2")
 
 [node name="Sprite-0001" type="Sprite2D" parent="."]
 position = Vector2(320, 180)
 texture = ExtResource("2_opfnp")
-
-[node name="RichTextLabel" type="RichTextLabel" parent="."]
-offset_left = 198.0
-offset_top = 57.0
-offset_right = 473.0
-offset_bottom = 133.0
-theme_override_fonts/normal_font = ExtResource("3_cp0ys")
-theme_override_font_sizes/normal_font_size = 45
-text = "Time Ghost"
-horizontal_alignment = 1
 
 [node name="start" type="Button" parent="."]
 offset_left = 253.0
@@ -58,9 +79,24 @@ theme_override_styles/hover = ExtResource("4_cp0ys")
 theme_override_styles/pressed = ExtResource("4_cp0ys")
 theme_override_styles/normal = SubResource("StyleBoxTexture_qe12f")
 text = "Controls"
-script = ExtResource("6_opfnp")
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("8_yhxw7")
-volume_db = 4.952
-autoplay = true
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(547, 238)
+scale = Vector2(8.84802, 8.58298)
+sprite_frames = SubResource("SpriteFrames_5egv6")
+
+[node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="."]
+position = Vector2(107, 232)
+scale = Vector2(8.84802, 8.58298)
+sprite_frames = SubResource("SpriteFrames_8dnnj")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+offset_left = -6.0
+offset_top = -29.0
+offset_right = 673.0
+offset_bottom = 144.0
+theme_override_fonts/normal_font = ExtResource("9_vr1f0")
+theme_override_font_sizes/mono_font_size = 100
+theme_override_font_sizes/normal_font_size = 200
+text = "Time Ghost"
+horizontal_alignment = 1

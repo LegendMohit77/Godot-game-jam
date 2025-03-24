@@ -8,7 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://s86p7aq8syof" path="res://Scenes/obstacle.tscn" id="4_ysn8j"]
 [ext_resource type="PackedScene" path="res://Scenes/Entry_Gate.tscn" id="5_ysn8j"]
 [ext_resource type="Texture2D" uid="uid://bkavq0rbjlwsp" path="res://Assets/Sprite-0001.png" id="6_t3or0"]
-[ext_resource type="PackedScene" path="res://Scenes/pickup.tscn" id="9_kylad"]
+[ext_resource type="PackedScene" uid="uid://c4cv1bp7o4b5x" path="res://Scenes/pickup.tscn" id="9_kylad"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_w1rnm"]
 normal = Vector2(0.847064, -0.531491)
