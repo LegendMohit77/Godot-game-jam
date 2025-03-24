@@ -5,10 +5,9 @@ var activated: bool = false
 
 @export var gate: NodePath  # Assign the gate node in the Inspector
 
-func _on_body_entered(body: CharacterBody2D) -> void:
-	if body.is_in_group("player"):
+func _on_body_entered(body: Node) -> void:
+	if body.is_in_group("crate"):  # Only react if the crate enters
 		
-	
 		if activated:
 			return
 

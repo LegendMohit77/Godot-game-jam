@@ -22,13 +22,17 @@ func open_gate():
 func _on_body_entered(body: CharacterBody2D) -> void:
 	
 	if body.is_in_group("player"):
+		
 		player_inside = true  # Mark player as inside
 
 		if is_open:  # If the gate is already open, transition directly
+			AudioManager.win.play()
 			transition_to_next_level()
 		elif not requires_button:  # If no button is required, open immediately
 			open_gate()
-			await animated_sprite.animation_finished  # Wait for animation before transition
+			
+			await animated_sprite.animation_finished  
+			AudioManager.win.play()
 			transition_to_next_level()
 
 func _on_body_exited(body: Node2D) -> void:
