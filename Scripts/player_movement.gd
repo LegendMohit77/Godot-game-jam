@@ -9,7 +9,7 @@ var was_in_air: bool = false
 @export var coyote_time: float = 0.1 
 @export var jump_buffer_time: float = 0.2 
 @export var reversed_controls: bool = false  
-
+@onready var splash = $walk_particles
 
 var coyote_timer: float = 0.0
 var jump_buffer_timer: float = 0.0
@@ -77,6 +77,7 @@ func _physics_process(delta):
 			obj.apply_impulse(Vector2(direction * push_force, 0))
 			
 	if was_in_air and on_ground:#land sound
+		splash.emitting=true
 		AudioManager.land.play() 
 		
 	was_in_air=not on_ground
