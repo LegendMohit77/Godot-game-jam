@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://dyvyatoeenfm3"]
+[gd_scene load_steps=15 format=3 uid="uid://dyvyatoeenfm3"]
 
 [ext_resource type="Texture2D" uid="uid://bkavq0rbjlwsp" path="res://Assets/Sprite-0001.png" id="1_213sf"]
 [ext_resource type="PackedScene" uid="uid://sfgiwxxyrurf" path="res://Scenes/timer_game.tscn" id="2_rbgxu"]
@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://cub2vkneoqwfh" path="res://Scenes/WinGate.tscn" id="6_ytef6"]
 [ext_resource type="PackedScene" uid="uid://s86p7aq8syof" path="res://Scenes/obstacle.tscn" id="7_cwt8c"]
 [ext_resource type="PackedScene" uid="uid://dk6dyjukkpxaf" path="res://Scenes/pushable_object.tscn" id="8_rbgxu"]
+[ext_resource type="PackedScene" uid="uid://c4cv1bp7o4b5x" path="res://Scenes/pickup.tscn" id="8_xnl3v"]
 [ext_resource type="PackedScene" uid="uid://dpt0si6ea2s03" path="res://Scenes/cratebutton.tscn" id="9_4kscp"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_w1rnm"]
@@ -209,6 +210,9 @@ offset_right = 325.0
 offset_bottom = 35.0
 theme_override_font_sizes/font_size = 23
 text = "Level 5"
+
+[node name="Area2D" parent="." instance=ExtResource("8_xnl3v")]
+position = Vector2(104, 94)
 
 [node name="PushableObject" parent="." instance=ExtResource("8_rbgxu")]
 position = Vector2(379, 80)

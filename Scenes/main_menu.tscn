@@ -5,9 +5,8 @@
 [ext_resource type="FontFile" uid="uid://d2en3pd8tlcmj" path="res://Assets/vcr_osd_mono/VCR_OSD_MONO_1.001.ttf" id="3_cp0ys"]
 [ext_resource type="StyleBox" path="res://Scenes/main_menu.tres" id="4_cp0ys"]
 [ext_resource type="Texture2D" uid="uid://dy6mk6o7yjxwy" path="res://Assets/Button (6).png" id="4_yhxw7"]
-[ext_resource type="Script" path="res://Scripts/start.gd" id="5_trj04"]
-[ext_resource type="Script" path="res://Scenes/controls.gd" id="6_opfnp"]
-[ext_resource type="AudioStream" uid="uid://vm5vs2fjyhfs" path="res://Assets/sound/Track_#3.wav" id="8_yhxw7"]
+[ext_resource type="Script" uid="uid://cjskd5crw5pwl" path="res://Scripts/start.gd" id="5_trj04"]
+[ext_resource type="Script" uid="uid://bt4wi4rqg2s05" path="res://Scripts/controls.gd" id="6_opfnp"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_nlkkf"]
 texture = ExtResource("4_yhxw7")
@@ -59,8 +58,3 @@ theme_override_styles/pressed = ExtResource("4_cp0ys")
 theme_override_styles/normal = SubResource("StyleBoxTexture_qe12f")
 text = "Controls"
 script = ExtResource("6_opfnp")
-
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("8_yhxw7")
-volume_db = 4.952
-autoplay = true

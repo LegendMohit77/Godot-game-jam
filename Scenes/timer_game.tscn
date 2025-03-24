@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://sfgiwxxyrurf"]
+[gd_scene load_steps=3 format=3 uid="uid://sfgiwxxyrurf"]
 
 [ext_resource type="Script" uid="uid://cygdyv1e2wxly" path="res://Scripts/timer_game.gd" id="1_dobex"]
+[ext_resource type="FontFile" uid="uid://d2en3pd8tlcmj" path="res://Assets/vcr_osd_mono/VCR_OSD_MONO_1.001.ttf" id="2_hiyn3"]
 
 [node name="timer_game" type="Node"]
 script = ExtResource("1_dobex")
@@ -10,6 +11,7 @@ offset_left = 25.0
 offset_top = 18.0
 offset_right = 73.0
 offset_bottom = 41.0
+theme_override_fonts/font = ExtResource("2_hiyn3")
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 30.0

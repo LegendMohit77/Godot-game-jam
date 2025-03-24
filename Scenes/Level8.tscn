@@ -145,7 +145,7 @@ scale = Vector2(0.198, 0.232)
 [node name="win" parent="." instance=ExtResource("7_s3ayw")]
 position = Vector2(89, 92)
 scale = Vector2(0.197849, 0.232442)
-next_level = "res://Scenes/end_screen.tscn"
+next_level = "res://Scenes/Level9.tscn"
 hide_gate_sprite = true
 
 [node name="spikes" type="Node2D" parent="."]
