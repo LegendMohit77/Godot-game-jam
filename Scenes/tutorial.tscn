@@ -1,0 +1,115 @@
+[gd_scene load_steps=10 format=3 uid="uid://c1uw7a1a4sfiw"]
+
+[ext_resource type="Script" uid="uid://bpa31yma1pt7d" path="res://Scenes/tutorial.gd" id="1_on4kn"]
+[ext_resource type="Texture2D" uid="uid://bkavq0rbjlwsp" path="res://Assets/Sprite-0001.png" id="1_ys4pu"]
+[ext_resource type="PackedScene" uid="uid://s86p7aq8syof" path="res://Scenes/obstacle.tscn" id="2_h2ono"]
+[ext_resource type="Texture2D" uid="uid://f22vm0egshvm" path="res://Assets/puzzle_platformer_kit/puzzle_tileset.png" id="2_on4kn"]
+[ext_resource type="PackedScene" uid="uid://c4cv1bp7o4b5x" path="res://Scenes/pickup.tscn" id="3_on4kn"]
+[ext_resource type="PackedScene" uid="uid://cub2vkneoqwfh" path="res://Scenes/WinGate.tscn" id="4_70gml"]
+[ext_resource type="PackedScene" uid="uid://ddws2fi8j8kuo" path="res://Scenes/button.tscn" id="6_8mnmb"]
+[ext_resource type="FontFile" uid="uid://d2en3pd8tlcmj" path="res://Assets/vcr_osd_mono/VCR_OSD_MONO_1.001.ttf" id="7_70gml"]
+[ext_resource type="PackedScene" uid="uid://dpt0si6ea2s03" path="res://Scenes/cratebutton.tscn" id="8_h2ono"]
+
+[node name="tutorial" type="Node2D"]
+script = ExtResource("1_on4kn")
+
+[node name="Sprite-0001" type="Sprite2D" parent="."]
+position = Vector2(320, 180)
+texture = ExtResource("1_ys4pu")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(59, 157)
+scale = Vector2(2.875, 2.8125)
+texture = ExtResource("2_on4kn")
+region_enabled = true
+region_rect = Rect2(64, 0, 16, 16)
+
+[node name="spike" parent="." instance=ExtResource("2_h2ono")]
+position = Vector2(64, 32)
+scale = Vector2(3, 3)
+script = null
+
+[node name="Area2D" parent="." instance=ExtResource("3_on4kn")]
+position = Vector2(59, 96)
+scale = Vector2(3, 3)
+script = null
+
+[node name="win" parent="." instance=ExtResource("4_70gml")]
+position = Vector2(63, 276)
+scale = Vector2(0.5, 0.5)
+script = null
+
+[node name="Button" parent="." instance=ExtResource("6_8mnmb")]
+position = Vector2(62, 185)
+scale = Vector2(3, 3)
+script = null
+
+[node name="Label" type="Label" parent="."]
+offset_left = 96.0
+offset_top = 216.0
+offset_right = 493.0
+offset_bottom = 265.0
+theme_override_fonts/font = ExtResource("7_70gml")
+text = "--> These buttons can only be pressed by crates
+"
+
+[node name="Label7" type="Label" parent="."]
+offset_left = 83.0
+offset_top = 314.0
+offset_right = 592.0
+offset_bottom = 371.0
+theme_override_fonts/font = ExtResource("7_70gml")
+theme_override_font_sizes/font_size = 30
+text = "Press enter to start the game
+"
+
+[node name="Label6" type="Label" parent="."]
+offset_left = 81.0
+offset_top = 19.0
+offset_right = 569.0
+offset_bottom = 68.0
+theme_override_fonts/font = ExtResource("7_70gml")
+text = "--> These are spikes. Touching them resets the level
+"
+
+[node name="Label4" type="Label" parent="."]
+offset_left = 99.0
+offset_top = 180.0
+offset_right = 496.0
+offset_bottom = 229.0
+theme_override_fonts/font = ExtResource("7_70gml")
+text = "--> Press buttons to open door. Some can be fake too
+"
+
+[node name="Label5" type="Label" parent="."]
+offset_left = 95.0
+offset_top = 139.0
+offset_right = 492.0
+offset_bottom = 188.0
+theme_override_fonts/font = ExtResource("7_70gml")
+text = "--> These are movable crates
+"
+
+[node name="Label2" type="Label" parent="."]
+offset_left = 106.0
+offset_top = 265.0
+offset_right = 503.0
+offset_bottom = 314.0
+theme_override_fonts/font = ExtResource("7_70gml")
+text = "--> Reach the doors to fisnish teh levels
+"
+
+[node name="Label3" type="Label" parent="."]
+offset_left = 86.0
+offset_top = 75.0
+offset_right = 752.0
+offset_bottom = 126.0
+theme_override_fonts/font = ExtResource("7_70gml")
+text = "--> These are time picups. Collect them to increase
+    the remaining time.
+"
+
+[node name="Cratebutton" parent="." instance=ExtResource("8_h2ono")]
+position = Vector2(63, 220)
+scale = Vector2(3, 3)
+script = null

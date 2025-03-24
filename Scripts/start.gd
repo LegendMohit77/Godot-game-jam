@@ -12,4 +12,4 @@ func _process(delta: float) -> void:
 
 func _pressed() -> void:
 	MusicManager.play_music()  # Start game music
-	get_tree().change_scene_to_file("res://Scenes/Level1.tscn")
+	get_tree().change_scene_to_file("res://Scenes/tutorial.tscn")
