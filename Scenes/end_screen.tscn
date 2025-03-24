@@ -1,11 +1,11 @@
 [gd_scene load_steps=8 format=3 uid="uid://66wpapqv3a75"]
 
 [ext_resource type="Texture2D" uid="uid://bkavq0rbjlwsp" path="res://Assets/Sprite-0001.png" id="1_f2mtv"]
-[ext_resource type="Script" uid="uid://c7gsbunej8q42" path="res://Scenes/end_screen.gd" id="1_fi2y0"]
+[ext_resource type="Script" uid="uid://c7gsbunej8q42" path="res://Scripts/end_screen.gd" id="1_fi2y0"]
 [ext_resource type="FontFile" uid="uid://d2en3pd8tlcmj" path="res://Assets/vcr_osd_mono/VCR_OSD_MONO_1.001.ttf" id="2_8yanq"]
 [ext_resource type="StyleBox" uid="uid://dp1xh4aj7ha17" path="res://Scenes/main_menu.tres" id="3_fi2y0"]
 [ext_resource type="Texture2D" uid="uid://dy6mk6o7yjxwy" path="res://Assets/Button (6).png" id="4_em7vc"]
-[ext_resource type="Script" uid="uid://dyfo427cuewxw" path="res://Scenes/back.gd" id="5_4suit"]
+[ext_resource type="Script" uid="uid://dyfo427cuewxw" path="res://Scripts/back.gd" id="5_4suit"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_wqrt5"]
 texture = ExtResource("4_em7vc")

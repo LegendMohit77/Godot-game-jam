@@ -7,8 +7,6 @@ var activated: bool = false
 
 func _on_body_entered(body: CharacterBody2D) -> void:
 	if body.is_in_group("player"):
-		
-	
 		if activated:
 			return
 
@@ -19,4 +17,4 @@ func _on_body_entered(body: CharacterBody2D) -> void:
 
 		var gate_node = get_node(gate)  # Get the gate node
 		if gate_node:
-			gate_node.open_gate()  # Tell the gate to open
+			gate_node.set_player_button(true)  # Player button is pressed

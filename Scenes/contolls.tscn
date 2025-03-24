@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://bkavq0rbjlwsp" path="res://Assets/Sprite-0001.png" id="1_w6qaq"]
 [ext_resource type="FontFile" uid="uid://d2en3pd8tlcmj" path="res://Assets/vcr_osd_mono/VCR_OSD_MONO_1.001.ttf" id="2_y4vh4"]
 [ext_resource type="StyleBox" uid="uid://dp1xh4aj7ha17" path="res://Scenes/main_menu.tres" id="3_totnf"]
-[ext_resource type="Script" uid="uid://dyfo427cuewxw" path="res://Scenes/back.gd" id="4_pl7td"]
+[ext_resource type="Script" uid="uid://dyfo427cuewxw" path="res://Scripts/back.gd" id="4_pl7td"]
 
 [node name="controlls" type="Node2D"]
 

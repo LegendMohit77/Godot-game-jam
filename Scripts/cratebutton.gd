@@ -7,7 +7,6 @@ var activated: bool = false
 
 func _on_body_entered(body: Node) -> void:
 	if body.is_in_group("crate"):  # Only react if the crate enters
-		
 		if activated:
 			return
 
@@ -18,4 +17,4 @@ func _on_body_entered(body: Node) -> void:
 
 		var gate_node = get_node(gate)  # Get the gate node
 		if gate_node:
-			gate_node.open_gate()  # Tell the gate to open
+			gate_node.set_crate_button(true)  # Crate button is pressed
