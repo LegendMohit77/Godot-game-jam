@@ -27,10 +27,12 @@ animations = [{
 
 [node name="Player" type="CharacterBody2D" groups=["player"]]
 z_index = 6
+scale = Vector2(0.94, 0.94)
 script = ExtResource("1_cvnsp")
 speed = 200.0
 jump_force = -600.0
 gravity = 2200.0
+push_force = 35.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_vgqql")

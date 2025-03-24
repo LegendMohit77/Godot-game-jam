@@ -21,7 +21,8 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="PushableObject" type="RigidBody2D"]
+[node name="PushableObject" type="RigidBody2D" groups=["crate"]]
+gravity_scale = 100.0
 script = ExtResource("1_0e236")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

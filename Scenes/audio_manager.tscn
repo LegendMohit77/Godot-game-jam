@@ -1,13 +1,35 @@
-[gd_scene load_steps=3 format=3 uid="uid://cdxq7lcqkw004"]
+[gd_scene load_steps=6 format=3 uid="uid://cdxq7lcqkw004"]
 
 [ext_resource type="Script" uid="uid://8cv8xl52ftwh" path="res://Scripts/audiomanager.gd" id="1_4tj6f"]
 [ext_resource type="AudioStream" uid="uid://blmjrukycmkhl" path="res://Assets/sound/Jump25.wav" id="2_hhwve"]
+[ext_resource type="AudioStream" uid="uid://de4mxo1q2n0tw" path="res://Assets/sound/77_flesh_02.wav" id="3_hhwve"]
+[ext_resource type="AudioStream" uid="uid://3lvkg8s7k3fj" path="res://Assets/sound/sfx_pressure_key_tp.mp3" id="4_0hehx"]
+[ext_resource type="AudioStream" uid="uid://b0nurxy36wndq" path="res://Assets/sound/hurt.wav" id="5_mjqhu"]
 
 [node name="AudioManager" type="Node"]
 script = ExtResource("1_4tj6f")
 
 [node name="Jump" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("2_hhwve")
-volume_db = -43.647
+volume_db = -23.971
+pitch_scale = 1.11
 
 [node name="Land" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_hhwve")
+volume_db = -7.495
+pitch_scale = 2.38
+
+[node name="button" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_0hehx")
+volume_db = 18.0
+pitch_scale = 1.61
+
+[node name="Win" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_0hehx")
+volume_db = 20.0
+pitch_scale = 0.75
+
+[node name="Hurt" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_mjqhu")
+volume_db = -1.874
+pitch_scale = 0.86

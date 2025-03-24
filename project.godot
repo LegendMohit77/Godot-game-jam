@@ -17,6 +17,7 @@ config/icon="res://icon.svg"
 
 [autoload]
 
+MusicManager="*res://Scripts/music_manager.gd"
 AudioManager="*res://Scenes/audio_manager.tscn"
 
 [display]

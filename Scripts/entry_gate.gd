@@ -16,4 +16,5 @@ func _on_body_entered(body: Node2D) -> void:
 				tree.paused = true
 				await tree.create_timer(0.5).timeout
 				tree.paused = false
+				AudioManager.win.play()
 				tree.change_scene_to_file(next_level)
