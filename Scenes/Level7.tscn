@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://sfgiwxxyrurf" path="res://Scenes/timer_game.tscn" id="2_ru3pw"]
 [ext_resource type="PackedScene" uid="uid://dp7uf2k6ss5wo" path="res://Scenes/player.tscn" id="3_ie467"]
 [ext_resource type="Texture2D" uid="uid://f22vm0egshvm" path="res://Assets/puzzle_platformer_kit/puzzle_tileset.png" id="4_hrrbo"]
-[ext_resource type="PackedScene" path="res://Scenes/Entry_Gate.tscn" id="5_tmtfn"]
+[ext_resource type="PackedScene" uid="uid://dxe85ffoak8lm" path="res://Scenes/Entry_Gate.tscn" id="5_tmtfn"]
 [ext_resource type="PackedScene" uid="uid://cub2vkneoqwfh" path="res://Scenes/WinGate.tscn" id="6_k843i"]
 [ext_resource type="PackedScene" uid="uid://s86p7aq8syof" path="res://Scenes/obstacle.tscn" id="7_qpcyb"]
 [ext_resource type="PackedScene" uid="uid://ddws2fi8j8kuo" path="res://Scenes/button.tscn" id="8_ie467"]
