@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://dp7uf2k6ss5wo"]
+[gd_scene load_steps=10 format=3 uid="uid://dp7uf2k6ss5wo"]
 
 [ext_resource type="Script" uid="uid://da4n70ga6uf5h" path="res://Scripts/player_movement.gd" id="1_cvnsp"]
 [ext_resource type="Texture2D" uid="uid://csuvgkgxxrdnx" path="res://Assets/puzzle_platformer_kit/puzzle_hero/hero_3.png" id="2_vgqql"]
@@ -25,6 +25,31 @@ animations = [{
 "speed": 8.0
 }]
 
+[sub_resource type="Gradient" id="Gradient_vgqql"]
+offsets = PackedFloat32Array(0, 0.386364, 0.590909, 1)
+colors = PackedColorArray(1, 1, 1, 0.356863, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_fkybt"]
+gradient = SubResource("Gradient_vgqql")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_x3wgy"]
+particle_flag_disable_z = true
+emission_shape = 3
+emission_box_extents = Vector3(1, 1, 1)
+spread = 72.88
+initial_velocity_min = 2.0
+initial_velocity_max = 10.0
+angular_velocity_min = 9.99998
+angular_velocity_max = 30.0
+gravity = Vector3(0, -10, 0)
+damping_min = 17.123
+damping_max = 41.738
+scale_min = 0.3
+scale_max = 0.5
+color_ramp = SubResource("GradientTexture1D_fkybt")
+hue_variation_min = -1.0
+hue_variation_max = -1.0
+
 [node name="Player" type="CharacterBody2D" groups=["player"]]
 z_index = 6
 scale = Vector2(0.94, 0.94)
@@ -42,3 +67,20 @@ sprite_frames = SubResource("SpriteFrames_3smsa")
 animation = &"idle"
 autoplay = "idle"
 frame_progress = 0.647148
+
+[node name="walk_particles" type="GPUParticles2D" parent="."]
+modulate = Color(0.158506, 0.262867, 0.354509, 1)
+position = Vector2(0, 7.44681)
+scale = Vector2(3.82, 1.722)
+emitting = false
+amount = 35
+lifetime = 0.14
+one_shot = true
+speed_scale = 1.51
+explosiveness = 0.37
+randomness = 0.1
+trail_enabled = true
+trail_lifetime = 0.01
+trail_sections = 5
+trail_section_subdivisions = 3
+process_material = SubResource("ParticleProcessMaterial_x3wgy")
