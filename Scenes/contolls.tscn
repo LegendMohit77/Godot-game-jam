@@ -1,0 +1,35 @@
+[gd_scene load_steps=5 format=3 uid="uid://0x1omfaliu5j"]
+
+[ext_resource type="Texture2D" uid="uid://bkavq0rbjlwsp" path="res://Assets/Sprite-0001.png" id="1_w6qaq"]
+[ext_resource type="FontFile" uid="uid://d2en3pd8tlcmj" path="res://Assets/vcr_osd_mono/VCR_OSD_MONO_1.001.ttf" id="2_y4vh4"]
+[ext_resource type="StyleBox" uid="uid://dp1xh4aj7ha17" path="res://Scenes/main_menu.tres" id="3_totnf"]
+[ext_resource type="Script" uid="uid://dyfo427cuewxw" path="res://Scenes/back.gd" id="4_pl7td"]
+
+[node name="controlls" type="Node2D"]
+
+[node name="Sprite-0001" type="Sprite2D" parent="."]
+position = Vector2(320, 180)
+texture = ExtResource("1_w6qaq")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+offset_left = 10.0
+offset_top = 74.0
+offset_right = 629.0
+offset_bottom = 255.0
+theme_override_fonts/normal_font = ExtResource("2_y4vh4")
+theme_override_font_sizes/normal_font_size = 60
+text = "A --> Move left
+D --> Move right
+Spacebar --> Jump"
+
+[node name="back" type="Button" parent="."]
+offset_left = 261.0
+offset_top = 255.0
+offset_right = 367.0
+offset_bottom = 310.0
+theme_override_font_sizes/font_size = 40
+theme_override_styles/hover = ExtResource("3_totnf")
+theme_override_styles/pressed = ExtResource("3_totnf")
+theme_override_styles/normal = ExtResource("3_totnf")
+text = "Back"
+script = ExtResource("4_pl7td")

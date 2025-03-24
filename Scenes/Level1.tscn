@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://4i1pfcnmn0px"]
+[gd_scene load_steps=14 format=3 uid="uid://4i1pfcnmn0px"]
 
 [ext_resource type="Script" uid="uid://ce6blo7lv7e54" path="res://Scripts/level_1.gd" id="1_6ll4n"]
 [ext_resource type="PackedScene" uid="uid://dp7uf2k6ss5wo" path="res://Scenes/player.tscn" id="1_jghel"]
@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://s86p7aq8syof" path="res://Scenes/obstacle.tscn" id="4_ysn8j"]
 [ext_resource type="PackedScene" uid="uid://dxe85ffoak8lm" path="res://Scenes/Entry_Gate.tscn" id="5_ysn8j"]
 [ext_resource type="Texture2D" uid="uid://bkavq0rbjlwsp" path="res://Assets/Sprite-0001.png" id="6_t3or0"]
+[ext_resource type="PackedScene" uid="uid://c4cv1bp7o4b5x" path="res://Scenes/pickup.tscn" id="9_kylad"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_w1rnm"]
 normal = Vector2(0.847064, -0.531491)
@@ -211,3 +212,6 @@ text = "Level 1"
 position = Vector2(319, 177)
 scale = Vector2(1.022, 1.021)
 zoom = Vector2(0.99, 0.965)
+
+[node name="Area2D" parent="." instance=ExtResource("9_kylad")]
+position = Vector2(177, 286)
