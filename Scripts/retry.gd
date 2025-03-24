@@ -14,4 +14,5 @@ func _process(delta: float) -> void:
 
 
 func _on_pressed() -> void:
+	TimerManager.reset_timer()
 	get_tree().change_scene_to_file(next_level)

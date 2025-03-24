@@ -67,19 +67,18 @@ func _physics_process(delta):
 		
 		elif is_gravity_inverted and velocity.y > 0:
 			velocity.y *= 0.4  
-			
-			#push
+	
 	for i in get_slide_collision_count():
 		var collision = get_slide_collision(i)
 		var obj = collision.get_collider()
 		
 		if obj is RigidBody2D:
 			obj.apply_impulse(Vector2(direction * push_force, 0))
-			
+	
 	if was_in_air and on_ground:#land sound
 		splash.emitting=true
 		AudioManager.land.play() 
-		
+	
 	was_in_air=not on_ground
 	
 	move_and_slide()
