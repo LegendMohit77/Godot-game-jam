@@ -19,6 +19,7 @@ config/icon="res://icon.svg"
 
 MusicManager="*res://Scripts/music_manager.gd"
 AudioManager="*res://Scenes/audio_manager.tscn"
+TimerManager="*res://Scripts/timer_manager.gd"
 
 [display]
 
