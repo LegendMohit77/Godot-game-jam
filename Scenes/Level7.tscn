@@ -1,19 +1,21 @@
-[gd_scene load_steps=12 format=3 uid="uid://umksjxcpccaq"]
+[gd_scene load_steps=14 format=3 uid="uid://bil35f8x17w54"]
 
-[ext_resource type="Texture2D" uid="uid://bkavq0rbjlwsp" path="res://Assets/Sprite-0001.png" id="1_egu6v"]
-[ext_resource type="PackedScene" uid="uid://sfgiwxxyrurf" path="res://Scenes/timer_game.tscn" id="2_ds0xo"]
-[ext_resource type="PackedScene" uid="uid://dp7uf2k6ss5wo" path="res://Scenes/player.tscn" id="3_d2hsu"]
-[ext_resource type="Texture2D" uid="uid://f22vm0egshvm" path="res://Assets/puzzle_platformer_kit/puzzle_tileset.png" id="4_sxy6w"]
-[ext_resource type="PackedScene" path="res://Scenes/Entry_Gate.tscn" id="5_qok1m"]
-[ext_resource type="PackedScene" uid="uid://cub2vkneoqwfh" path="res://Scenes/WinGate.tscn" id="6_xgqih"]
-[ext_resource type="PackedScene" uid="uid://s86p7aq8syof" path="res://Scenes/obstacle.tscn" id="7_2fq2u"]
+[ext_resource type="Texture2D" uid="uid://bkavq0rbjlwsp" path="res://Assets/Sprite-0001.png" id="1_2x6a7"]
+[ext_resource type="PackedScene" uid="uid://sfgiwxxyrurf" path="res://Scenes/timer_game.tscn" id="2_ru3pw"]
+[ext_resource type="PackedScene" uid="uid://dp7uf2k6ss5wo" path="res://Scenes/player.tscn" id="3_ie467"]
+[ext_resource type="Texture2D" uid="uid://f22vm0egshvm" path="res://Assets/puzzle_platformer_kit/puzzle_tileset.png" id="4_hrrbo"]
+[ext_resource type="PackedScene" path="res://Scenes/Entry_Gate.tscn" id="5_tmtfn"]
+[ext_resource type="PackedScene" uid="uid://cub2vkneoqwfh" path="res://Scenes/WinGate.tscn" id="6_k843i"]
+[ext_resource type="PackedScene" uid="uid://s86p7aq8syof" path="res://Scenes/obstacle.tscn" id="7_qpcyb"]
+[ext_resource type="PackedScene" uid="uid://ddws2fi8j8kuo" path="res://Scenes/button.tscn" id="8_ie467"]
+[ext_resource type="PackedScene" uid="uid://poy1ctcyiq81" path="res://Scenes/buttonfakes.tscn" id="9_hrrbo"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_w1rnm"]
 normal = Vector2(0.847064, -0.531491)
 distance = -95.9543
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_3e6hu"]
-texture = ExtResource("4_sxy6w")
+texture = ExtResource("4_hrrbo")
 0:0/0 = 0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-0.719435, 0.179857, 8, -8, 8, 8, -8, 8)
 1:0/0 = 0
@@ -68,7 +70,7 @@ texture = ExtResource("4_sxy6w")
 7:3/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4q2ik"]
-texture = ExtResource("4_sxy6w")
+texture = ExtResource("4_hrrbo")
 0:0/0 = 0
 1:0/0 = 0
 2:0/0 = 0
@@ -107,14 +109,14 @@ physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_3e6hu")
 sources/1 = SubResource("TileSetAtlasSource_4q2ik")
 
-[node name="Level6" type="Node2D"]
+[node name="Level7" type="Node2D"]
 
 [node name="bg" type="Sprite2D" parent="."]
 z_index = -1
 position = Vector2(320, 180)
-texture = ExtResource("1_egu6v")
+texture = ExtResource("1_2x6a7")
 
-[node name="timer_game" parent="." instance=ExtResource("2_ds0xo")]
+[node name="timer_game" parent="." instance=ExtResource("2_ru3pw")]
 
 [node name="left boundary" type="StaticBody2D" parent="."]
 position = Vector2(2, 330)
@@ -124,10 +126,9 @@ position = Vector2(88, 237)
 rotation = 0.557692
 shape = SubResource("WorldBoundaryShape2D_w1rnm")
 
-[node name="Player" parent="." instance=ExtResource("3_d2hsu")]
+[node name="Player" parent="." instance=ExtResource("3_ie467")]
 position = Vector2(68, 333)
 scale = Vector2(1.09663, 1.09609)
-reversed_controls = true
 
 [node name="TileMap" type="TileMap" parent="."]
 position = Vector2(65, 296)
@@ -137,78 +138,110 @@ layer_0/tile_data = PackedInt32Array(262140, 65536, 1, 262141, 65536, 1, 262142,
 layer_1/name = "Layer1"
 layer_1/z_index = -1
 
-[node name="entry" parent="." instance=ExtResource("5_qok1m")]
+[node name="entry" parent="." instance=ExtResource("5_tmtfn")]
 position = Vector2(42, 333)
 scale = Vector2(0.198, 0.232)
 
-[node name="win" parent="." instance=ExtResource("6_xgqih")]
+[node name="win" parent="." instance=ExtResource("6_k843i")]
 position = Vector2(614, 204)
 scale = Vector2(0.197849, 0.232442)
-next_level = "res://Scenes/Level7.tscn"
+next_level = "res://Scenes/Level8.tscn"
+requires_button = true
 
 [node name="spikes" type="Node2D" parent="."]
 position = Vector2(1, 0)
 
-[node name="spike" parent="spikes" instance=ExtResource("7_2fq2u")]
+[node name="spike" parent="spikes" instance=ExtResource("7_qpcyb")]
 position = Vector2(367, 336)
 
-[node name="spike2" parent="spikes" instance=ExtResource("7_2fq2u")]
+[node name="spike2" parent="spikes" instance=ExtResource("7_qpcyb")]
 position = Vector2(381, 336)
 
-[node name="spike3" parent="spikes" instance=ExtResource("7_2fq2u")]
+[node name="spike3" parent="spikes" instance=ExtResource("7_qpcyb")]
 position = Vector2(354, 224)
 rotation = 3.12815
 
-[node name="spike4" parent="spikes" instance=ExtResource("7_2fq2u")]
+[node name="spike4" parent="spikes" instance=ExtResource("7_qpcyb")]
 position = Vector2(368, 224)
 rotation = 3.12815
 
-[node name="spike5" parent="spikes" instance=ExtResource("7_2fq2u")]
+[node name="spike5" parent="spikes" instance=ExtResource("7_qpcyb")]
 position = Vector2(382, 224)
 rotation = 3.12815
 
-[node name="spike6" parent="spikes" instance=ExtResource("7_2fq2u")]
+[node name="spike6" parent="spikes" instance=ExtResource("7_qpcyb")]
 position = Vector2(396, 224)
 rotation = 3.12815
 
-[node name="spike7" parent="spikes" instance=ExtResource("7_2fq2u")]
+[node name="spike7" parent="spikes" instance=ExtResource("7_qpcyb")]
 position = Vector2(340, 224)
 rotation = 3.12815
 
-[node name="spike8" parent="spikes" instance=ExtResource("7_2fq2u")]
+[node name="spike8" parent="spikes" instance=ExtResource("7_qpcyb")]
 position = Vector2(260, 176)
 rotation = 3.12815
 
-[node name="spike9" parent="spikes" instance=ExtResource("7_2fq2u")]
+[node name="spike9" parent="spikes" instance=ExtResource("7_qpcyb")]
 position = Vector2(237, 176)
 rotation = 3.12815
 
-[node name="spike10" parent="spikes" instance=ExtResource("7_2fq2u")]
+[node name="spike10" parent="spikes" instance=ExtResource("7_qpcyb")]
 position = Vector2(210, 176)
 rotation = 3.12815
 
-[node name="spike11" parent="spikes" instance=ExtResource("7_2fq2u")]
+[node name="spike11" parent="spikes" instance=ExtResource("7_qpcyb")]
 position = Vector2(184, 112)
 rotation = 3.12815
 
-[node name="spike12" parent="spikes" instance=ExtResource("7_2fq2u")]
+[node name="spike12" parent="spikes" instance=ExtResource("7_qpcyb")]
 position = Vector2(118, 336)
 rotation = 0.0206742
 
-[node name="spike13" parent="spikes" instance=ExtResource("7_2fq2u")]
+[node name="spike13" parent="spikes" instance=ExtResource("7_qpcyb")]
 position = Vector2(587, 288)
 rotation = 0.0206742
 
-[node name="Level 6" type="Label" parent="."]
+[node name="Level 7" type="Label" parent="."]
 modulate = Color(0.396078, 0.45098, 0.572549, 1)
 offset_left = 271.0
 offset_top = 12.0
 offset_right = 325.0
 offset_bottom = 35.0
 theme_override_font_sizes/font_size = 23
-text = "Level 6"
+text = "Level 7"
 
 [node name="Camera2D" type="Camera2D" parent="." groups=["camera"]]
 position = Vector2(319, 177)
 scale = Vector2(1.022, 1.021)
 zoom = Vector2(0.99, 0.965)
+
+[node name="Button" parent="." instance=ExtResource("8_ie467")]
+position = Vector2(186, 80)
+gate = NodePath("../win")
+
+[node name="fakebutton" parent="." instance=ExtResource("9_hrrbo")]
+position = Vector2(341, 192)
+
+[node name="fakebutton2" parent="." instance=ExtResource("9_hrrbo")]
+position = Vector2(256, 256)
+
+[node name="fakebutton3" parent="." instance=ExtResource("9_hrrbo")]
+position = Vector2(533, 335)
+
+[node name="fakebutton4" parent="." instance=ExtResource("9_hrrbo")]
+position = Vector2(90, 96)
+
+[node name="fakebutton5" parent="." instance=ExtResource("9_hrrbo")]
+position = Vector2(571, 208)
+
+[node name="fakebutton6" parent="." instance=ExtResource("9_hrrbo")]
+position = Vector2(453, 256)
+
+[node name="fakebutton7" parent="." instance=ExtResource("9_hrrbo")]
+position = Vector2(601, 143)
+
+[node name="fakebutton8" parent="." instance=ExtResource("9_hrrbo")]
+position = Vector2(234, 81)
+
+[node name="fakebutton9" parent="." instance=ExtResource("9_hrrbo")]
+position = Vector2(347, 80)
