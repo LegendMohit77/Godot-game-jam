@@ -3,10 +3,15 @@ extends Area2D
 @export var next_level: String = "res://Scenes/Level2.tscn"
 @export var requires_button: bool = false  # If true, the gate only opens when the button is pressed
 @onready var animated_sprite: AnimatedSprite2D = $AnimatedSprite2D
-
+@export var hide_gate_sprite: bool = false
 var is_open: bool = false  # Tracks if the gate is open
 var player_inside: bool = false  # Tracks if the player is inside
 
+
+
+func _ready():
+		if hide_gate_sprite:
+			animated_sprite.visible = false
 func open_gate():
 	if is_open:
 		return  # Prevent reopening
