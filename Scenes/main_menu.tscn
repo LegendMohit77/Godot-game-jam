@@ -1,9 +1,9 @@
-[gd_scene load_steps=11 format=3 uid="uid://k2cq82lbm6xt"]
+[gd_scene load_steps=10 format=3 uid="uid://oh6xfvmne8ny"]
 
-[ext_resource type="Script" path="res://Scripts/main_menu.gd" id="1_n45e2"]
+[ext_resource type="Script" uid="uid://dlst25jspr7om" path="res://Scripts/main_menu.gd" id="1_n45e2"]
 [ext_resource type="Texture2D" uid="uid://bkavq0rbjlwsp" path="res://Assets/Sprite-0001.png" id="2_opfnp"]
 [ext_resource type="FontFile" uid="uid://d2en3pd8tlcmj" path="res://Assets/vcr_osd_mono/VCR_OSD_MONO_1.001.ttf" id="3_cp0ys"]
-[ext_resource type="StyleBox" path="res://Scenes/main_menu.tres" id="4_cp0ys"]
+[ext_resource type="StyleBox" uid="uid://dp1xh4aj7ha17" path="res://Scenes/main_menu.tres" id="4_cp0ys"]
 [ext_resource type="Texture2D" uid="uid://dy6mk6o7yjxwy" path="res://Assets/Button (6).png" id="4_yhxw7"]
 [ext_resource type="Script" uid="uid://cjskd5crw5pwl" path="res://Scripts/start.gd" id="5_trj04"]
 [ext_resource type="Script" uid="uid://bt4wi4rqg2s05" path="res://Scripts/controls.gd" id="6_opfnp"]
